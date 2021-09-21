@@ -1,18 +1,12 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 public class Controller {
 
-    @FXML
-    private ImageView dayView;
     @FXML
     private ImageView circle;
     @FXML
@@ -52,4 +46,26 @@ public class Controller {
     @FXML
     private Button night;
 
+
+    @FXML
+    private ImageView background;
+
+    Image dayImage = new Image(getClass().getResourceAsStream("assets/background_day.png"));
+    Image nightImage = new Image(getClass().getResourceAsStream("assets/background_night.png"));
+
+    public void changeBackgroundDay(){
+        background.setImage(dayImage);
+        background.setFitHeight(664);
+        background.setFitWidth(882);
+    }
+
+    public void changeBackgroundNight(){
+        background.setImage(nightImage);
+        background.setFitHeight(654);
+        background.setFitWidth(972);
+    }
+
+    public void turnOff(){
+        System.exit(0);
+    }
 }
