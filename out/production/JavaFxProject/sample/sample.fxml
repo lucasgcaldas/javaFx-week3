@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <Pane maxHeight="480.0" maxWidth="800.0" minHeight="480.0" minWidth="800.0" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -24,61 +25,25 @@
             <Image url="@assets/clock_background.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="notification" layoutX="563.0" layoutY="42.0">
-         <image>
-            <Image url="@assets/notification_icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="warning" layoutX="714.0" layoutY="42.0">
-         <image>
-            <Image url="@assets/warning_icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="wifi" layoutX="658.0" layoutY="42.0">
-         <image>
-            <Image url="@assets/wifi_icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="bt" layoutX="604.0" layoutY="42.0">
-         <image>
-            <Image url="@assets/bluetooth_icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="drop" layoutX="53.0" layoutY="205.0">
+      <ImageView fx:id="drop" layoutX="53.0" layoutY="208.0">
          <image>
             <Image url="@assets/drop_icon.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="thermometerIcon" layoutX="54.0" layoutY="260.0">
+      <ImageView fx:id="thermometerIcon" layoutX="54.0" layoutY="254.0">
          <image>
             <Image url="@assets/thermometer_icon.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="clock" layoutX="340.0" layoutY="36.0">
-         <image>
-            <Image url="@assets/clock_icon.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="totalcross" layoutX="645.0" layoutY="416.0">
-         <image>
-            <Image url="@assets/logo_totalcross.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="torizon" layoutX="651.0" layoutY="385.0">
-         <image>
-            <Image url="@assets/logo_torizon.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="powerOf" cache="true" layoutX="39.0" layoutY="47.0" mnemonicParsing="false" onAction="#turnOff">
+      <Button fx:id="powerOff" cache="true" layoutX="39.0" layoutY="31.0" mnemonicParsing="false" onAction="#turnOff" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView accessibleRole="BUTTON">
                <image>
                   <Image url="@assets/power_button.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="plus" layoutX="505.0" layoutY="216.0" mnemonicParsing="false" onAction="#plusOne">
+         </graphic></Button>
+      <Button fx:id="plus" layoutX="505.0" layoutY="216.0" mnemonicParsing="false" onAction="#plusOne" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView>
                <image>
@@ -87,7 +52,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="minus" layoutX="222.0" layoutY="216.0" mnemonicParsing="false" onAction="#minusOne">
+      <Button fx:id="minus" layoutX="222.0" layoutY="216.0" mnemonicParsing="false" onAction="#minusOne" style="-fx-background-color: transparent;">
          <graphic>
             <ImageView>
                <image>
@@ -96,27 +61,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="day" layoutX="38.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeBackgroundDay">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="35.0">
-               <image>
-                  <Image url="@assets/night_on_button.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button fx:id="night" layoutX="95.0" layoutY="152.0" mnemonicParsing="false" onAction="#changeBackgroundNight">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="35.0">
-               <image>
-                  <Image url="@assets/night_off_button.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
       <HBox layoutX="218.0" layoutY="392.0" prefHeight="75.0" prefWidth="335.0">
          <children>
-            <Button fx:id="home" mnemonicParsing="false">
+            <Button fx:id="home" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -125,7 +72,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="thermometer" mnemonicParsing="false">
+            <Button fx:id="thermometer" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -134,7 +81,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="tools" mnemonicParsing="false">
+            <Button fx:id="tools" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -143,7 +90,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="calendar" mnemonicParsing="false">
+            <Button fx:id="calendar" mnemonicParsing="false" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -154,25 +101,112 @@
             </Button>
          </children>
       </HBox>
-      <Label fx:id="time" layoutX="371.0" layoutY="32.0" prefHeight="28.0" prefWidth="159.0" text="mm:HH" textFill="WHITE">
+      <HBox layoutX="605.0" layoutY="34.0" prefHeight="16.0" prefWidth="115.0" spacing="10">
+         <children>
+            <ImageView fx:id="notification" fitHeight="30.0" fitWidth="28.0">
+               <image>
+                  <Image url="@assets/notification_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="bt" fitHeight="30.0" fitWidth="31.0">
+               <image>
+                  <Image url="@assets/bluetooth_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="wifi" fitHeight="29.0" fitWidth="29.0">
+               <image>
+                  <Image url="@assets/wifi_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="warning" fitHeight="30.0" fitWidth="33.0">
+               <image>
+                  <Image url="@assets/warning_icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutX="330.0" layoutY="36.0" prefHeight="34.0" prefWidth="100.0" spacing="5">
+         <children>
+            <ImageView fx:id="clock" fitHeight="29.0" fitWidth="29.0">
+               <image>
+                  <Image url="@assets/clock_icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="time" alignment="TOP_LEFT" prefHeight="36.0" prefWidth="74.0" style="-fx-font-weight: bold;" text="00:00" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="39.0" layoutY="157.0" prefHeight="35.0" prefWidth="86.0">
+         <children>
+            <Button fx:id="day" mnemonicParsing="false" onAction="#changeBackgroundDay" prefHeight="40.0" prefWidth="44.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="35.0">
+                     <image>
+                        <Image url="@assets/day_off_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="night" mnemonicParsing="false" onAction="#changeBackgroundNight" prefHeight="5.0" prefWidth="19.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="35.0">
+                     <image>
+                        <Image url="@assets/night_off_button.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="temperature1" alignment="CENTER" layoutX="83.0" layoutY="204.0" prefHeight="38.0" prefWidth="58.0" style="-fx-font-weight: bold;" text="56%" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Black" size="27.0" />
+            <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="temperature" alignment="CENTER" layoutX="291.0" layoutY="197.0" prefHeight="28.0" prefWidth="159.0" text="TT" textFill="#8d8686">
+      <Label fx:id="temperature11" alignment="CENTER" layoutX="83.0" layoutY="255.0" prefHeight="38.0" prefWidth="41.0" style="-fx-font-weight: bold;" text="14°" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Black" size="43.0" />
+            <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="climate" alignment="CENTER" layoutX="311.0" layoutY="245.0" prefHeight="28.0" prefWidth="159.0" text="Climate" textAlignment="CENTER" textFill="#8d8686">
-         <font>
-            <Font name="Segoe UI Light" size="17.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="degrees" fitHeight="41.0" fitWidth="41.0" layoutX="394.0" layoutY="208.0">
-         <image>
-            <Image url="@assets/degree_typography.png" />
-         </image>
-      </ImageView>
+      <VBox layoutX="645.0" layoutY="405.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="41.0" prefWidth="115.0" spacing="3">
+         <children>
+            <ImageView fx:id="torizon">
+               <image>
+                  <Image url="@assets/logo_torizon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="totalcross">
+               <image>
+                  <Image url="@assets/logo_totalcross.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="340.0" layoutY="193.0" prefHeight="75.0" prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="48.0" prefWidth="93.0">
+               <children>
+                  <Label fx:id="temperature" alignment="CENTER" prefHeight="0.0" prefWidth="51.0" style="-fx-font-weight: bold;" text="TT" textFill="#8d8686">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="degrees" fitHeight="41.0" fitWidth="41.0" nodeOrientation="INHERIT">
+                     <image>
+                        <Image url="@assets/degree_typography.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label fx:id="climate" alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="58.0" text="Climate" textAlignment="CENTER" textFill="#8d8686">
+               <font>
+                  <Font name="Bebas Neuer" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
    </children>
 </Pane>
