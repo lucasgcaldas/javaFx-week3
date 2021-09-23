@@ -18,6 +18,11 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
+/**
+ * Class Controller that is responsible to instantiate
+ * all methods of the application
+ * @author Lucas
+ */
 public class Controller {
 
     @FXML
@@ -35,6 +40,10 @@ public class Controller {
     ImageView nightButtonOn = new ImageView(getClass().getResource("assets/night_on_button.png").toExternalForm());
     ImageView nightButtonOff = new ImageView(getClass().getResource("assets/night_off_button.png").toExternalForm());
 
+    /**
+     * method responsible for change the
+     * background to light theme
+     */
     public void changeBackgroundDay() {
         day.setGraphic(dayButtonOn);
         night.setGraphic(nightButtonOff);
@@ -45,6 +54,10 @@ public class Controller {
         background.setFitWidth(882);
     }
 
+    /**
+     * method responsible for change the
+     * background to dark theme
+     */
     public void changeBackgroundNight() {
         night.setGraphic(nightButtonOn);
         day.setGraphic(dayButtonOff);
@@ -55,6 +68,11 @@ public class Controller {
         background.setFitWidth(972);
     }
 
+    /**
+     * method responsible for set the
+     * width and the height of the day on/off,
+     * night on/off buttons
+     */
     private void setWidthAndHeight() {
         dayButtonOn.setFitWidth(35);
         dayButtonOn.setFitHeight(30);
@@ -66,6 +84,9 @@ public class Controller {
         nightButtonOff.setFitHeight(30);
     }
 
+    /**
+     * method responsible for turnOff the application
+     */
     public void turnOff() {
         System.exit(0);
     }
@@ -77,6 +98,11 @@ public class Controller {
     private Label temperature;
 
     IntegerProperty property = new SimpleIntegerProperty();
+
+    /**
+     * method responsible for starts the current time clock,
+     * set the width and the height of the day on button
+     */
     @FXML
     public void initialize() {
         day.setGraphic(dayButtonOn);
@@ -98,6 +124,9 @@ public class Controller {
         clock.play();
     }
 
+    /**
+     * method responsible for add one on the screen of temperature
+     */
     public void plusOne(){
         if(property.get() >= 16 && property.get() < 31){
             property.set(property.get() + 1);
@@ -105,6 +134,9 @@ public class Controller {
         }
     }
 
+    /**
+     * method responsible for subtract one on the screen of temperature
+     */
     public void minusOne(){
         if(property.get() <= 31 && property.get() > 16){
             property.set(property.get() - 1);
@@ -112,6 +144,9 @@ public class Controller {
         }
     }
 
+    /**
+     * method responsible for popUp window of the buttons
+     */
     public void popUp(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Pop-Up notification");

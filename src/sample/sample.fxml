@@ -161,12 +161,12 @@
             </Button>
          </children>
       </HBox>
-      <Label fx:id="temperature1" alignment="CENTER" layoutX="83.0" layoutY="204.0" prefHeight="38.0" prefWidth="58.0" style="-fx-font-weight: bold;" text="56%" textFill="WHITE">
+      <Label fx:id="percentage56" alignment="CENTER" layoutX="83.0" layoutY="204.0" prefHeight="38.0" prefWidth="58.0" style="-fx-font-weight: bold;" text="56%" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="temperature11" alignment="CENTER" layoutX="83.0" layoutY="255.0" prefHeight="38.0" prefWidth="41.0" style="-fx-font-weight: bold;" text="14°" textFill="WHITE">
+      <Label fx:id="temperature14" alignment="CENTER" layoutX="83.0" layoutY="255.0" prefHeight="38.0" prefWidth="41.0" style="-fx-font-weight: bold;" text="14°" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
