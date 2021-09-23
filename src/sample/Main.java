@@ -7,11 +7,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
 
 public class Main extends Application {
 
+
     @Override
     public void start(Stage primaryStage){
+        Locale.setDefault(Locale.US);
+
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource("sample.fxml"));

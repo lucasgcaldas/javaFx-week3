@@ -6,15 +6,17 @@ import javafx.animation.Timeline;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Popup;
 import javafx.util.Duration;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
 
 public class Controller {
 
@@ -108,5 +110,13 @@ public class Controller {
             property.set(property.get() - 1);
             temperature.textProperty().bind(property.asString());
         }
+    }
+
+    public void popUp(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Pop-Up notification");
+        alert.setContentText("Button is ok!");
+
+        Optional<ButtonType> result = alert.showAndWait();
     }
 }

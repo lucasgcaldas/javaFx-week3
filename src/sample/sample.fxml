@@ -63,7 +63,7 @@
       </Button>
       <HBox layoutX="218.0" layoutY="392.0" prefHeight="75.0" prefWidth="335.0">
          <children>
-            <Button fx:id="home" mnemonicParsing="false" style="-fx-background-color: transparent;">
+            <Button fx:id="home" mnemonicParsing="false" onAction="#popUp" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -72,7 +72,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="thermometer" mnemonicParsing="false" style="-fx-background-color: transparent;">
+            <Button fx:id="thermometer" mnemonicParsing="false" onAction="#popUp" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -81,7 +81,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="tools" mnemonicParsing="false" style="-fx-background-color: transparent;">
+            <Button fx:id="tools" mnemonicParsing="false" onAction="#popUp" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -90,7 +90,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="calendar" mnemonicParsing="false" style="-fx-background-color: transparent;">
+            <Button fx:id="calendar" mnemonicParsing="false" onAction="#popUp" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="66.0" fitWidth="70.0">
                      <image>
@@ -103,22 +103,22 @@
       </HBox>
       <HBox layoutX="605.0" layoutY="34.0" prefHeight="16.0" prefWidth="115.0" spacing="10">
          <children>
-            <ImageView fx:id="notification" fitHeight="30.0" fitWidth="28.0">
+            <ImageView fx:id="notification" fitHeight="30.0" fitWidth="28.0" onMouseClicked="#popUp">
                <image>
                   <Image url="@assets/notification_icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="bt" fitHeight="30.0" fitWidth="31.0">
+            <ImageView fx:id="bt" fitHeight="30.0" fitWidth="31.0" onMouseClicked="#popUp">
                <image>
                   <Image url="@assets/bluetooth_icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="wifi" fitHeight="29.0" fitWidth="29.0">
+            <ImageView fx:id="wifi" fitHeight="29.0" fitWidth="29.0" onMouseClicked="#popUp">
                <image>
                   <Image url="@assets/wifi_icon.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="warning" fitHeight="30.0" fitWidth="33.0">
+            <ImageView fx:id="warning" fitHeight="30.0" fitWidth="33.0" onMouseClicked="#popUp" onMouseReleased="#popUp">
                <image>
                   <Image url="@assets/warning_icon.png" />
                </image>
